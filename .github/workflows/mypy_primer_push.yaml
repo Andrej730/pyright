@@ -55,7 +55,7 @@ jobs:
             --type-checker pyright \
             --new $GITHUB_SHA \
             --debug \
-            --output concise \
+            --output full \
             | tee diff.txt
           ) || [ $? -eq 1 ]
       - name: Upload mypy_primer diff
